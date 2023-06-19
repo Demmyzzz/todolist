@@ -7,6 +7,7 @@ public class Task extends JPanel {
     private JButton done;
     private JButton remove;
 
+
     public Task(){
         GridLayout Layouttask = new GridLayout(1, 4);
         Layouttask.setHgap(5);
@@ -20,7 +21,7 @@ public class Task extends JPanel {
         index.setBackground(new Color(255, 234, 17));
         this.add(this.index);
 
-        taskname = new JTextField("enter task");
+        taskname = new JTextField("kapibara");
         taskname.setPreferredSize(new Dimension(10, 20));
         taskname.setBorder(BorderFactory.createEmptyBorder());
         taskname.setBackground(new Color(255, 234, 17));
@@ -34,13 +35,13 @@ public class Task extends JPanel {
         remove.setPreferredSize(new Dimension(10, 20));
         this.add(this.remove);
 
-
     }
 
     public void writeindexjl(int n) {
         this.index.setText(String.valueOf(n));
         this.revalidate();
     }
+    public JTextField gettextfieldj(){ return this.taskname; }
     public JButton getdonej(){
         return this.done;
     }
